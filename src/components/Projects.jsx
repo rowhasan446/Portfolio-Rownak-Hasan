@@ -13,7 +13,7 @@ const projects = [
         title: "Furniture Website",
         description: "Designed and developed an e-commerce website for a furniture business.",
         tech: ["Next.js", "JavaScript", "MongoDB", "Frontend"],
-        links: { github: "https://github.com/rowhasan446/Valexa-Furniture", demo: "www.valexafurniture.com" },
+        links: { github: "https://github.com/rowhasan446/Valexa-Furniture", demo: "https://www.valexafurniture.com/" },
     },
     {
         title: "Bus Ticket Booking Website",
