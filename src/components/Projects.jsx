@@ -25,7 +25,7 @@ const projects = [
         title: "Travel Agency Website",
         description: "Developed a travel agency website with a user-friendly interface and responsive design.",
         tech: ["JavaScript", "HTML", "CSS", "Frontend"],
-        links: { github: "https://github.com/rowhasan446/Travel-Website", demo: "https://rowhasan446.github.io/Bus-Ticket-Website/" },
+        links: { github: "https://github.com/rowhasan446/Travel-Website", demo: "https://rowhasan446.github.io/Travel-Website/" },
     },
     {
         title: "Biker Zone Website",
