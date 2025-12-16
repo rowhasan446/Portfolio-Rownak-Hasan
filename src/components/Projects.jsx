@@ -4,6 +4,12 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const projects = [
     {
+        title: "BashaChai - Home rental Service Website",
+        description: "A comprehensive home rental service website that allows users to browse, book, and manage rental properties with ease.",
+        tech: ["Nextjs", "HTML", "Tailwind CSS", "|Firebase", "MongoDB", "Full-stack"],
+        links: { github: "https://github.com/rowhasan446/BashaChai", demo: "https://basha-chai.vercel.app/" }, // Add actual links if available
+    },
+    {
         title: "CookBot AI App",
         description: "An AI-powered recipe chatbot that suggests dishes based on available ingredients and user health conditions (e.g., diabetes, allergies).",
         tech: ["Python", "Hugging Face", "Mistral 7B", "Full-stack"],
