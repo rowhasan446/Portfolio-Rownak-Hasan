@@ -105,7 +105,7 @@ const Projects = () => {
                             </div>
 
                             {/* Hover Glow Effect */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                            <div className="absolute inset-0 bg-linear-to-br from-cyan-400/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                         </motion.div>
                     ))}
                 </div>
