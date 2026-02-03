@@ -20,20 +20,50 @@ const About = () => {
     return (
         <section id="about" className="py-20 px-6 relative z-10 bg-black/50 backdrop-blur-sm">
             <div className="container mx-auto max-w-6xl">
-                <motion.div
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    viewport={{ once: true }}
-                    className="mb-16 text-center"
-                >
-                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">About Me</h2>
-                    <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
-                        Hi, I'm a passionate Computer Science and Engineering undergraduate at North South University.
-                        I hone my skills to build innovative web and full-stack applications. With a strong foundation in modern web technologies,
-                        I thrive on turning ideas into interactive, user-friendly experiences.
-                    </p>
-                </motion.div>
+                <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+                    {/* Profile Picture */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
+                        className="flex justify-center"
+                    >
+                        <div className="relative w-64 h-64 md:w-70 md:h-90 rounded-full overflow-hidden border-4 border-cyan-400/20 shadow-2xl shadow-cyan-400/10 group">
+                            <img
+                                src="/formal portrait.png"
+                                alt="Profile"
+                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            />
+                            <div className="absolute inset-0 bg-cyan-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        </div>
+                    </motion.div>
+
+                    {/* Bio Text */}
+                    <motion.div
+                        initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
+                    >
+                        <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">About Me</h2>
+                        <p className="text-gray-400 text-lg leading-relaxed mb-6">
+                            Hi, I'm a passionate Computer Science and Engineering undergraduate at North South University.
+                            I hone my skills to build innovative web and full-stack applications. With a strong foundation in modern web technologies,
+                            I thrive on turning ideas into interactive, user-friendly experiences.
+                        </p>
+                        <div className="flex gap-4">
+                            <div className="pe-6 border-r border-white/10">
+                                <h3 className="text-4xl font-bold text-white mb-2">3+</h3>
+                                <p className="text-cyan-400 text-sm uppercase tracking-wider">Years Exp.</p>
+                            </div>
+                            <div className="pl-2">
+                                <h3 className="text-4xl font-bold text-white mb-2">20+</h3>
+                                <p className="text-cyan-400 text-sm uppercase tracking-wider">Projects</p>
+                            </div>
+                        </div>
+                    </motion.div>
+                </div>
 
                 <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
                     {skills.map((skill, index) => (

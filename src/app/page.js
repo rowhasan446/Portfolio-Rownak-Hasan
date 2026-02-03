@@ -3,6 +3,7 @@ import About from "@/components/About";
 import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
 import Contact from "@/components/Contact";
+import FunZone from "@/components/FunZone";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <About />
       <Projects />
       <Experience />
+      <FunZone />
       <Contact />
     </main>
   );
