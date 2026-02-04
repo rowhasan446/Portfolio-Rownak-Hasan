@@ -22,7 +22,7 @@ const projects = [
         description: "A website for a software company named Tricode IT.",
         tech: ["Nextjs", "HTML", "Tailwind CSS", "Firebase", "MongoDB", "Full-stack"],
         links: { github: "https://github.com/rowhasan446/TriCodeIT", demo: "https://tricode-it.vercel.app/" },
-        image: "/tricode.png"
+        image: "/Tricode.png"
     },
     {
         title: "CookBot AI App",
