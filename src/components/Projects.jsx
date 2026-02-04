@@ -25,6 +25,13 @@ const projects = [
         image: "/Tricode.png"
     },
     {
+        title: "TriDrop - E-commerce Website",
+        description: "Designed and developed an e-commerce website for dropshipping business.",
+        tech: ["Next.js", "JavaScript", "MongoDB", "Frontend"],
+        links: { github: "https://github.com/rowhasan446/TriDrop", demo: "https://tri-drop.vercel.app/" },
+        image: "tridrop.png"
+    },
+    {
         title: "CookBot AI App",
         description: "An AI-powered recipe chatbot that suggests dishes based on available ingredients and user health conditions (e.g., diabetes, allergies).",
         tech: ["Python", "Hugging Face", "Mistral 7B", "Full-stack"],
@@ -58,6 +65,13 @@ const projects = [
         tech: ["JavaScript", "HTML", "CSS", "Frontend", "DaisyUI"],
         links: { github: "https://github.com/rowhasan446/Biker-Zone-DaisyUi-", demo: "https://rowhasan446.github.io/Biker-Zone-DaisyUi-/" },
         image: "bike.png"
+    },
+    {
+        title: "Alpha Clash Pro",
+        description: "A webstie to practice your typing skill with fun gaming mode.",
+        tech: ["JavaScript", "HTML", "CSS", "Frontend", "DaisyUI"],
+        links: { github: "https://github.com/rowhasan446/Alpha-Clash-Pro", demo: "https://rowhasan446.github.io/Alpha-Clash-Pro/" },
+        image: "alphaclash.png"
     },
     {
         title: "Jacket Website",
