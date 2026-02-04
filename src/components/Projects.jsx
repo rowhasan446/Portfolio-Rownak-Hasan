@@ -18,6 +18,13 @@ const projects = [
         image: "dental.png"
     },
     {
+        title: "Tricode IT",
+        description: "A website for a software company named Tricode IT.",
+        tech: ["Nextjs", "HTML", "Tailwind CSS", "Firebase", "MongoDB", "Full-stack"],
+        links: { github: "https://github.com/rowhasan446/TriCodeIT", demo: "https://tricode-it.vercel.app/" },
+        image: "/tricode.png"
+    },
+    {
         title: "CookBot AI App",
         description: "An AI-powered recipe chatbot that suggests dishes based on available ingredients and user health conditions (e.g., diabetes, allergies).",
         tech: ["Python", "Hugging Face", "Mistral 7B", "Full-stack"],

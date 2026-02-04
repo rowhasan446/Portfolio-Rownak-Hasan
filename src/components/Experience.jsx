@@ -3,6 +3,15 @@ import { motion } from "framer-motion";
 
 const experiences = [
     {
+        company: "TriCode IT",
+        role: "Web Developer",
+        period: "2024 - 2025",
+        description: [
+            "Working with the wider development team.",
+            "Collaborate with clients to plan, develop, and maintain websites.",
+        ],
+    },
+    {
         company: "Moment Matters",
         role: "Photographer & Cinematographer",
         period: "2024 - Ongoing",
