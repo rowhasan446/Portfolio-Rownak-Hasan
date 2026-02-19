@@ -8,6 +8,7 @@ import Contact from "@/components/Contact";
 import FunZone from "@/components/FunZone";
 import WelcomeAnimation from "@/components/WelcomeAnimation";
 import { AnimatePresence, motion } from "framer-motion";
+import AskAboutMeButton from "@/components/Chatbot/AskAboutMeButton";
 
 export default function Home() {
   const [showWelcome, setShowWelcome] = useState(true);
@@ -30,6 +31,7 @@ export default function Home() {
             <Experience />
             <FunZone />
             <Contact />
+            <AskAboutMeButton />
           </motion.div>
         )}
       </AnimatePresence>
