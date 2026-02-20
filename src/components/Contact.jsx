@@ -13,8 +13,8 @@ const Contact = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Get In Touch</h2>
-                    <p className="text-gray-400">
+                    <h2 className="text-3xl md:text-5xl font-bold text-black dark:text-white mb-6">Get In Touch</h2>
+                    <p className="text-gray-600 dark:text-gray-400">
                         Have a project in mind or just want to say hi? Feel free to reach out!
                     </p>
                 </motion.div>
@@ -27,30 +27,30 @@ const Contact = () => {
                         viewport={{ once: true }}
                         className="space-y-8"
                     >
-                        <div className="flex items-center gap-4 text-gray-300">
-                            <div className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center text-cyan-400 text-xl">
+                        <div className="flex items-center gap-4 text-gray-700 dark:text-gray-300">
+                            <div className="w-12 h-12 bg-black/5 dark:bg-white/5 rounded-full flex items-center justify-center text-cyan-600 dark:text-cyan-400 text-xl shadow-sm">
                                 <FaEnvelope />
                             </div>
                             <div>
-                                <h3 className="font-bold text-white">Email</h3>
+                                <h3 className="font-bold text-black dark:text-white">Email</h3>
                                 <p>rowhasan446@gmail.com</p>
                             </div>
                         </div>
-                        <div className="flex items-center gap-4 text-gray-300">
-                            <div className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center text-cyan-400 text-xl">
+                        <div className="flex items-center gap-4 text-gray-700 dark:text-gray-300">
+                            <div className="w-12 h-12 bg-black/5 dark:bg-white/5 rounded-full flex items-center justify-center text-cyan-600 dark:text-cyan-400 text-xl shadow-sm">
                                 <FaPhone />
                             </div>
                             <div>
-                                <h3 className="font-bold text-white">Phone</h3>
+                                <h3 className="font-bold text-black dark:text-white">Phone</h3>
                                 <p>+88 01867019582</p>
                             </div>
                         </div>
-                        <div className="flex items-center gap-4 text-gray-300">
-                            <div className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center text-cyan-400 text-xl">
+                        <div className="flex items-center gap-4 text-gray-700 dark:text-gray-300">
+                            <div className="w-12 h-12 bg-black/5 dark:bg-white/5 rounded-full flex items-center justify-center text-cyan-600 dark:text-cyan-400 text-xl shadow-sm">
                                 <FaMapMarkerAlt />
                             </div>
                             <div>
-                                <h3 className="font-bold text-white">Location</h3>
+                                <h3 className="font-bold text-black dark:text-white">Location</h3>
                                 <p>Rampura, Dhaka - 1219</p>
                             </div>
                         </div>
@@ -68,21 +68,21 @@ const Contact = () => {
                             <input
                                 type="text"
                                 placeholder="Your Name"
-                                className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-400 transition-colors"
+                                className="w-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-lg px-4 py-3 text-black dark:text-white placeholder:text-gray-400 focus:outline-none focus:border-cyan-400 transition-colors shadow-sm"
                             />
                         </div>
                         <div>
                             <input
                                 type="email"
                                 placeholder="Your Email"
-                                className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-400 transition-colors"
+                                className="w-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-lg px-4 py-3 text-black dark:text-white placeholder:text-gray-400 focus:outline-none focus:border-cyan-400 transition-colors shadow-sm"
                             />
                         </div>
                         <div>
                             <textarea
                                 rows="4"
                                 placeholder="Your Message"
-                                className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-400 transition-colors"
+                                className="w-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-lg px-4 py-3 text-black dark:text-white placeholder:text-gray-400 focus:outline-none focus:border-cyan-400 transition-colors shadow-sm"
                             ></textarea>
                         </div>
                         <button

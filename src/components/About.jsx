@@ -18,7 +18,7 @@ const skills = [
 
 const About = () => {
     return (
-        <section id="about" className="py-20 px-6 relative z-10 bg-black/50 backdrop-blur-sm">
+        <section id="about" className="py-20 px-6 relative z-10 bg-white/80 dark:bg-black/50 backdrop-blur-sm">
             <div className="container mx-auto max-w-6xl">
                 <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
                     {/* Profile Picture */}
@@ -46,20 +46,20 @@ const About = () => {
                         transition={{ duration: 0.8 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">About Me</h2>
-                        <p className="text-gray-400 text-lg leading-relaxed mb-6">
+                        <h2 className="text-3xl md:text-5xl font-bold text-black dark:text-white mb-6">About Me</h2>
+                        <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-6">
                             Hi, I'm a passionate Computer Science and Engineering undergraduate at North South University.
                             I hone my skills to build innovative web and full-stack applications. With a strong foundation in modern web technologies,
                             I thrive on turning ideas into interactive, user-friendly experiences.
                         </p>
                         <div className="flex gap-4">
-                            <div className="pe-6 border-r border-white/10">
-                                <h3 className="text-4xl font-bold text-white mb-2">3+</h3>
-                                <p className="text-cyan-400 text-sm uppercase tracking-wider">Years Exp.</p>
+                            <div className="pe-6 border-r border-black/10 dark:border-white/10">
+                                <h3 className="text-4xl font-bold text-black dark:text-white mb-2">3+</h3>
+                                <p className="text-cyan-600 dark:text-cyan-400 text-sm uppercase tracking-wider">Years Exp.</p>
                             </div>
                             <div className="pl-2">
-                                <h3 className="text-4xl font-bold text-white mb-2">20+</h3>
-                                <p className="text-cyan-400 text-sm uppercase tracking-wider">Projects</p>
+                                <h3 className="text-4xl font-bold text-black dark:text-white mb-2">20+</h3>
+                                <p className="text-cyan-600 dark:text-cyan-400 text-sm uppercase tracking-wider">Projects</p>
                             </div>
                         </div>
                     </motion.div>
@@ -74,10 +74,10 @@ const About = () => {
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             viewport={{ once: true }}
                             whileHover={{ y: -5, borderColor: "rgba(34, 211, 238, 0.5)" }}
-                            className="bg-white/5 border border-white/10 rounded-xl p-6 flex flex-col items-center justify-center gap-4 transition-colors hover:bg-white/10"
+                            className="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-xl p-6 flex flex-col items-center justify-center gap-4 transition-colors hover:bg-black/10 dark:hover:bg-white/10 shadow-sm"
                         >
                             <div className="text-4xl">{skill.icon}</div>
-                            <span className="text-gray-300 font-medium">{skill.name}</span>
+                            <span className="text-gray-700 dark:text-gray-300 font-medium">{skill.name}</span>
                         </motion.div>
                     ))}
                 </div>

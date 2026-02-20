@@ -42,19 +42,19 @@ const experiences = [
 
 const Experience = () => {
     return (
-        <section id="experience" className="py-20 px-6 relative z-10 bg-black/50 backdrop-blur-sm">
+        <section id="experience" className="py-20 px-6 relative z-10 bg-white/80 dark:bg-black/50 backdrop-blur-sm">
             <div className="container mx-auto max-w-4xl">
                 <motion.h2
                     initial={{ opacity: 0, y: -20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
-                    className="text-3xl md:text-5xl font-bold text-white mb-16 text-center"
+                    className="text-3xl md:text-5xl font-bold text-black dark:text-white mb-16 text-center"
                 >
                     Experience
                 </motion.h2>
 
-                <div className="relative border-l border-white/20 ml-4 md:ml-10 space-y-12">
+                <div className="relative border-l border-black/10 dark:border-white/20 ml-4 md:ml-10 space-y-12">
                     {experiences.map((exp, index) => (
                         <motion.div
                             key={index}
@@ -67,11 +67,11 @@ const Experience = () => {
                             {/* Timeline Dot */}
                             <div className="absolute -left-[5px] top-2 w-2.5 h-2.5 bg-cyan-400 rounded-full shadow-[0_0_10px_rgba(34,211,238,0.8)]" />
 
-                            <div className="bg-white/5 border border-white/10 p-6 rounded-xl hover:bg-white/10 transition-colors">
-                                <span className="text-sm text-cyan-400 font-mono mb-2 block">{exp.period}</span>
-                                <h3 className="text-xl md:text-2xl font-bold text-white mb-1">{exp.role}</h3>
-                                <h4 className="text-lg text-gray-400 mb-4">{exp.company}</h4>
-                                <ul className="list-disc list-inside space-y-2 text-gray-300 text-sm md:text-base">
+                            <div className="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-6 rounded-xl hover:bg-black/10 dark:hover:bg-white/10 transition-colors shadow-sm">
+                                <span className="text-sm text-cyan-600 dark:text-cyan-400 font-mono mb-2 block">{exp.period}</span>
+                                <h3 className="text-xl md:text-2xl font-bold text-black dark:text-white mb-1">{exp.role}</h3>
+                                <h4 className="text-lg text-gray-600 dark:text-gray-400 mb-4">{exp.company}</h4>
+                                <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 text-sm md:text-base">
                                     {exp.description.map((item, i) => (
                                         <li key={i}>{item}</li>
                                     ))}

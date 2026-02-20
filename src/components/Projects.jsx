@@ -98,7 +98,7 @@ const Projects = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
-                    className="text-3xl md:text-5xl font-bold text-white mb-16 text-center"
+                    className="text-3xl md:text-5xl font-bold text-black dark:text-white mb-16 text-center"
                 >
                     <span className="text-cyan-400">Featured</span> Projects
                 </motion.h2>
@@ -111,7 +111,7 @@ const Projects = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
                             viewport={{ once: true }}
-                            className="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-cyan-400/50 transition-all duration-500 hover:-translate-y-2"
+                            className="group relative bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-2xl overflow-hidden hover:border-cyan-400/50 transition-all duration-500 hover:-translate-y-2 shadow-sm"
                         >
                             {/* Project Image */}
                             <div className="relative h-48 w-full overflow-hidden">
@@ -131,10 +131,10 @@ const Projects = () => {
                             </div>
 
                             <div className="p-6">
-                                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors line-clamp-1">
+                                <h3 className="text-xl font-bold text-black dark:text-white mb-3 group-hover:text-cyan-500 dark:group-hover:text-cyan-400 transition-colors line-clamp-1">
                                     {project.title}
                                 </h3>
-                                <p className="text-gray-400 text-sm mb-4 line-clamp-3">
+                                <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-3">
                                     {project.description}
                                 </p>
                                 <div className="flex flex-wrap gap-2 mb-6">

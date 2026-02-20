@@ -4,8 +4,10 @@ import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
+import { useTheme } from "./ThemeProvider";
 
 const Hero = () => {
+    const { theme } = useTheme();
     const particlesInit = useCallback(async (engine) => {
         await loadSlim(engine);
     }, []);
@@ -18,7 +20,7 @@ const Hero = () => {
                 options={{
                     background: {
                         color: {
-                            value: "#000000",
+                            value: "transparent",
                         },
                     },
                     fpsLimit: 120,
@@ -48,10 +50,10 @@ const Hero = () => {
                     },
                     particles: {
                         color: {
-                            value: "#ffffff",
+                            value: theme === 'dark' ? "#ffffff" : "#000000",
                         },
                         links: {
-                            color: "#ffffff",
+                            color: theme === 'dark' ? "#ffffff" : "#000000",
                             distance: 150,
                             enable: true,
                             opacity: 0.2,
@@ -98,12 +100,12 @@ const Hero = () => {
                     <h2 className="text-sm md:text-lg text-cyan-400 font-mono mb-4 tracking-widest uppercase">
                         Hello, I am
                     </h2>
-                    <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
+                    <h1 className="text-5xl md:text-7xl font-bold text-black dark:text-white mb-6 tracking-tight">
                         Rownak Hasan Joy
                     </h1>
-                    <div className="text-xl md:text-3xl text-gray-400 font-light h-[40px]">
+                    <div className="text-xl md:text-3xl text-gray-600 dark:text-gray-400 font-light h-[40px]">
                         <span className="mr-2">I am a</span>
-                        <span className="text-white font-semibold">
+                        <span className="text-black dark:text-white font-semibold">
                             <Typewriter
                                 words={["Web Developer", "CSE Student", "Tech Enthusiast", "Problem Solver"]}
                                 loop={0}
@@ -139,11 +141,11 @@ const Hero = () => {
                 transition={{ delay: 2, duration: 1 }}
                 className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
             >
-                <div className="w-[30px] h-[50px] border-2 border-white/20 rounded-full flex justify-center p-2">
+                <div className="w-[30px] h-[50px] border-2 border-black/20 dark:border-white/20 rounded-full flex justify-center p-2">
                     <motion.div
                         animate={{ y: [0, 12, 0] }}
                         transition={{ duration: 1.5, repeat: Infinity, repeatType: "loop" }}
-                        className="w-1.5 h-1.5 bg-white rounded-full"
+                        className="w-1.5 h-1.5 bg-black dark:bg-white rounded-full"
                     />
                 </div>
             </motion.div>

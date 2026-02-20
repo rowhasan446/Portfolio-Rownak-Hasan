@@ -45,7 +45,7 @@ const CustomCursor = () => {
                 }}
             />
             <motion.div
-                className="fixed top-0 left-0 w-8 h-8 border border-white rounded-full pointer-events-none z-[9998] opacity-50"
+                className="fixed top-0 left-0 w-8 h-8 border border-black dark:border-white rounded-full pointer-events-none z-[9998] opacity-50"
                 animate={{
                     x: mousePosition.x - 16,
                     y: mousePosition.y - 16,
