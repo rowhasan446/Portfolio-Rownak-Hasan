@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaCommentAlt } from "react-icons/fa";
-import ChatModal from "./ChatModal";
+import ChatSidePanel from "./ChatSidePanel";
 
 const AskAboutMeButton = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -30,7 +30,7 @@ const AskAboutMeButton = () => {
                 </div>
             </motion.button>
 
-            <ChatModal isOpen={isOpen} onClose={() => setIsOpen(false)} />
+            <ChatSidePanel isOpen={isOpen} onClose={() => setIsOpen(false)} />
         </>
     );
 };
