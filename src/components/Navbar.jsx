@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
-import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
   { name: "Home", href: "#hero" },
@@ -65,9 +64,6 @@ const Navbar = () => {
           >
             <FaEnvelope />
           </a>
-          <div className="ml-4">
-            <ThemeToggle />
-          </div>
         </div>
       </div>
     </motion.nav>

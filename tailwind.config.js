@@ -5,6 +5,7 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       animation: {
@@ -18,49 +19,49 @@ module.exports = {
       },
       keyframes: {
         glitch: {
-          '0%, 100%': { 
+          '0%, 100%': {
             transform: 'translate(0)',
             textShadow: '0 0 20px rgba(59, 130, 246, 0.8), 0 0 40px rgba(59, 130, 246, 0.5)'
           },
-          '25%': { 
+          '25%': {
             transform: 'translate(-2px, 2px)',
             textShadow: '0 0 20px rgba(236, 72, 153, 0.8), 0 0 40px rgba(236, 72, 153, 0.5)'
           },
-          '50%': { 
+          '50%': {
             transform: 'translate(2px, -2px)',
             textShadow: '0 0 20px rgba(34, 211, 238, 0.8), 0 0 40px rgba(34, 211, 238, 0.5)'
           },
-          '75%': { 
+          '75%': {
             transform: 'translate(-2px, -2px)',
             textShadow: '0 0 20px rgba(168, 85, 247, 0.8), 0 0 40px rgba(168, 85, 247, 0.5)'
           },
         },
         orbit: {
-          '0%': { 
+          '0%': {
             transform: 'rotate(0deg) translateX(80px) rotate(0deg)',
             opacity: '1'
           },
-          '100%': { 
+          '100%': {
             transform: 'rotate(360deg) translateX(80px) rotate(-360deg)',
             opacity: '1'
           },
         },
         'orbit-reverse': {
-          '0%': { 
+          '0%': {
             transform: 'rotate(180deg) translateX(80px) rotate(-180deg)',
             opacity: '1'
           },
-          '100%': { 
+          '100%': {
             transform: 'rotate(540deg) translateX(80px) rotate(-540deg)',
             opacity: '1'
           },
         },
         scan: {
-          '0%, 100%': { 
+          '0%, 100%': {
             transform: 'translateY(-100%)',
             opacity: '0'
           },
-          '50%': { 
+          '50%': {
             transform: 'translateY(100%)',
             opacity: '0.3'
           },

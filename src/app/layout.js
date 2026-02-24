@@ -2,7 +2,6 @@ import { Geist, Geist_Mono, Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import CustomCursor from "@/components/CustomCursor";
-import { ThemeProvider } from "@/components/ThemeProvider";
 
 
 const geistSans = Geist({
@@ -31,15 +30,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth dark">
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${outfit.variable} antialiased transition-colors duration-300`}
       >
-        <ThemeProvider>
-          <CustomCursor />
-          <Navbar />
-          {children}
-        </ThemeProvider>
+        <CustomCursor />
+        <Navbar />
+        {children}
       </body>
     </html>
   );

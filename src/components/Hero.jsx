@@ -4,10 +4,8 @@ import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
-import { useTheme } from "./ThemeProvider";
 
 const Hero = () => {
-    const { theme } = useTheme();
     const particlesInit = useCallback(async (engine) => {
         await loadSlim(engine);
     }, []);
@@ -50,10 +48,10 @@ const Hero = () => {
                     },
                     particles: {
                         color: {
-                            value: theme === 'dark' ? "#ffffff" : "#000000",
+                            value: "#ffffff",
                         },
                         links: {
-                            color: theme === 'dark' ? "#ffffff" : "#000000",
+                            color: "#ffffff",
                             distance: 150,
                             enable: true,
                             opacity: 0.2,
@@ -141,11 +139,11 @@ const Hero = () => {
                 transition={{ delay: 2, duration: 1 }}
                 className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
             >
-                <div className="w-[30px] h-[50px] border-2 border-black/20 dark:border-white/20 rounded-full flex justify-center p-2">
+                <div className="w-[30px] h-[50px] border-2 border-white/20 rounded-full flex justify-center p-2">
                     <motion.div
                         animate={{ y: [0, 12, 0] }}
                         transition={{ duration: 1.5, repeat: Infinity, repeatType: "loop" }}
-                        className="w-1.5 h-1.5 bg-black dark:bg-white rounded-full"
+                        className="w-1.5 h-1.5 bg-white rounded-full"
                     />
                 </div>
             </motion.div>
