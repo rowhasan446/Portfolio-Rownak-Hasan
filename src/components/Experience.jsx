@@ -42,7 +42,7 @@ const experiences = [
 
 const Experience = () => {
     return (
-        <section id="experience" className="py-20 px-6 relative z-10 bg-white/80 dark:bg-black/50 backdrop-blur-sm">
+        <section id="experience" className="py-20 px-6 relative z-10 bg-black/80 dark:bg-black/80 backdrop-blur-sm">
             <div className="container mx-auto max-w-4xl">
                 <motion.h2
                     initial={{ opacity: 0, y: -20 }}
@@ -54,7 +54,7 @@ const Experience = () => {
                     Experience
                 </motion.h2>
 
-                <div className="relative border-l border-black/10 dark:border-white/20 ml-4 md:ml-10 space-y-12">
+                <div className="relative border-l border-black/10 dark:border-white/20 ml-2 md:ml-10 space-y-12">
                     {experiences.map((exp, index) => (
                         <motion.div
                             key={index}
@@ -62,7 +62,7 @@ const Experience = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6, delay: index * 0.2 }}
                             viewport={{ once: true }}
-                            className="relative pl-8 md:pl-12"
+                            className="relative pl-6 md:pl-12"
                         >
                             {/* Timeline Dot */}
                             <div className="absolute -left-[5px] top-2 w-2.5 h-2.5 bg-cyan-400 rounded-full shadow-[0_0_10px_rgba(34,211,238,0.8)]" />

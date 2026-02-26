@@ -89,7 +89,7 @@ const Hero = () => {
                 className="absolute inset-0 z-0"
             />
 
-            <div className="relative z-10 text-center px-4">
+            <div className="relative z-10 text-center px-6 pointer-events-none">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -98,12 +98,12 @@ const Hero = () => {
                     <h2 className="text-sm md:text-lg text-cyan-400 font-mono mb-4 tracking-widest uppercase">
                         Hello, I am
                     </h2>
-                    <h1 className="text-5xl md:text-7xl font-bold text-black dark:text-white mb-6 tracking-tight">
+                    <h1 className="text-4xl md:text-7xl font-bold text-white dark:text-white mb-6 tracking-tight leading-tight drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
                         Rownak Hasan Joy
                     </h1>
-                    <div className="text-xl md:text-3xl text-gray-600 dark:text-gray-400 font-light h-[40px]">
-                        <span className="mr-2">I am a</span>
-                        <span className="text-black dark:text-white font-semibold">
+                    <div className="text-xl md:text-3xl text-gray-300 dark:text-gray-400 font-light min-h-[80px] md:min-h-[40px] flex flex-col md:flex-row items-center justify-center gap-2">
+                        <span className="whitespace-nowrap">I am a</span>
+                        <span className="text-white dark:text-white font-semibold drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]">
                             <Typewriter
                                 words={["Web Developer", "CSE Student", "Tech Enthusiast", "Problem Solver"]}
                                 loop={0}
@@ -116,6 +116,8 @@ const Hero = () => {
                         </span>
                     </div>
                 </motion.div>
+
+
 
                 <motion.div
                     initial={{ opacity: 0 }}

@@ -86,27 +86,28 @@ const MemoryMatch = () => {
                 <div>Moves: <span className="text-white">{moves}</span></div>
                 <div>Matches: <span className="text-white">{matchedCards.length} / {cardsData.length}</span></div>
             </div>
-            <div className="grid grid-cols-4 gap-3 md:gap-4 max-w-lg mx-auto">
+            <div className="grid grid-cols-4 gap-2 md:gap-4 max-w-sm md:max-w-lg mx-auto">
                 {cards.map((card) => {
                     const isFlipped = flippedCards.some((c) => c.uniqueId === card.uniqueId) || matchedCards.includes(card.type);
                     return (
                         <motion.div
                             key={card.uniqueId}
-                            className={`relative w-16 h-20 md:w-20 md:h-24 cursor-pointer transform-style-3d transition-all duration-500`}
+                            className={`relative w-14 h-18 md:w-20 md:h-24 cursor-pointer transform-style-3d transition-all duration-500`}
                             onClick={() => handleCardClick(card)}
                             animate={{ rotateY: isFlipped ? 180 : 0 }}
                             transition={{ duration: 0.4 }}
                         >
-                            <div className="absolute inset-0 bg-white/10 border border-white/20 rounded-xl flex items-center justify-center backface-hidden">
-                                <span className="text-2xl text-cyan-400/50">?</span>
+                            <div className="absolute inset-0 bg-white/10 border border-white/20 rounded-lg md:rounded-xl flex items-center justify-center backface-hidden">
+                                <span className="text-xl md:text-2xl text-cyan-400/50">?</span>
                             </div>
-                            <div className="absolute inset-0 bg-white/10 border-2 border-cyan-400 rounded-xl flex items-center justify-center backface-hidden" style={{ transform: "rotateY(180deg)" }}>
-                                <div className="text-3xl">{card.icon}</div>
+                            <div className="absolute inset-0 bg-white/10 border-2 border-cyan-400 rounded-lg md:rounded-xl flex items-center justify-center backface-hidden" style={{ transform: "rotateY(180deg)" }}>
+                                <div className="text-2xl md:text-3xl">{card.icon}</div>
                             </div>
                         </motion.div>
                     );
                 })}
             </div>
+
             {gameWon && (
                 <button onClick={shuffleCards} className="mt-8 px-8 py-3 bg-cyan-400 text-black font-bold rounded-full hover:bg-cyan-300 transition-all">Play Again</button>
             )}
