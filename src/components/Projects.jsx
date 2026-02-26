@@ -3,6 +3,18 @@ import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const projects = [
+
+    {
+    title: "Heart Disease Risk Checker",
+    description: "Interactive web app that estimates heart disease risk using patient inputs (age, cholesterol, chest pain, etc.). Educational ML demo with live prediction.",
+    tech: ["Python", "Streamlit", "scikit-learn", "Random Forest", "Pandas", "NumPy"],
+    links: { 
+        github: "https://github.com/rowhasan446/Heart-Disease-Checker-ML-Project-", 
+        demo: "https://heartdiseasepredictior.streamlit.app/"   // ← replace with your actual Streamlit Cloud URL
+    },
+    image: "Heart.png"   // ← name your portfolio image file this way
+},
+
     {
         title: "BashaChai - Home rental Service Website",
         description: "A comprehensive home rental service website that allows users to browse, book, and manage rental properties with ease.",
