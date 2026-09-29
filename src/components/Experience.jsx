@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 const experiences = [
     {
-        company: "TriCode IT",
-        role: "Web Developer",
-        period: "2024 - 2025",
+        company: "AOS Network Limited",
+        role: "Full Stack Web Developer - Internship",
+        period: "Feb, 2025 - April, 2025",
         description: [
             "Working with the wider development team.",
             "Collaborate with clients to plan, develop, and maintain websites.",
@@ -67,15 +67,20 @@ const Experience = () => {
                             {/* Timeline Dot */}
                             <div className="absolute -left-[5px] top-2 w-2.5 h-2.5 bg-cyan-400 rounded-full shadow-[0_0_10px_rgba(34,211,238,0.8)]" />
 
-                            <div className="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-6 rounded-xl hover:bg-black/10 dark:hover:bg-white/10 transition-colors shadow-sm">
-                                <span className="text-sm text-cyan-600 dark:text-cyan-400 font-mono mb-2 block">{exp.period}</span>
-                                <h3 className="text-xl md:text-2xl font-bold text-black dark:text-white mb-1">{exp.role}</h3>
-                                <h4 className="text-lg text-gray-600 dark:text-gray-400 mb-4">{exp.company}</h4>
-                                <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 text-sm md:text-base">
-                                    {exp.description.map((item, i) => (
-                                        <li key={i}>{item}</li>
-                                    ))}
-                                </ul>
+                            <div className="relative group rounded-xl p-[1px] bg-gradient-to-r from-cyan-500/30 via-cyan-400/60 to-blue-500/30 hover:from-cyan-400 hover:via-teal-300 hover:to-cyan-400 transition-all duration-500 shadow-[0_0_15px_rgba(34,211,238,0.15)] hover:shadow-[0_0_25px_rgba(34,211,238,0.5)]">
+                                {/* Ambient Glow backdrop */}
+                                <div className="absolute -inset-0.5 bg-cyan-400/20 rounded-xl blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
+                                <div className="relative z-10 bg-black/80 dark:bg-black/90 p-6 rounded-xl backdrop-blur-md transition-colors">
+                                    <span className="text-sm text-cyan-400 font-mono mb-2 block tracking-wide font-semibold">{exp.period}</span>
+                                    <h3 className="text-xl md:text-2xl font-bold text-white mb-1 group-hover:text-cyan-300 transition-colors">{exp.role}</h3>
+                                    <h4 className="text-lg text-gray-300 mb-4 font-medium">{exp.company}</h4>
+                                    <ul className="list-disc list-inside space-y-2 text-gray-300 text-sm md:text-base">
+                                        {exp.description.map((item, i) => (
+                                            <li key={i}>{item}</li>
+                                        ))}
+                                    </ul>
+                                </div>
                             </div>
                         </motion.div>
                     ))}

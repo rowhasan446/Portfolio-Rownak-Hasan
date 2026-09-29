@@ -31,7 +31,7 @@ const About = () => {
                     >
                         <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden border-4 border-cyan-400/20 shadow-2xl shadow-cyan-400/10 group rotate-3 hover:rotate-0 transition-transform duration-500">
                             <img
-                                src="/formal portrait.png"
+                                src="/formal.png"
                                 alt="Profile"
                                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                             />
@@ -66,7 +66,7 @@ const About = () => {
                     </motion.div>
                 </div>
 
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6 mb-12">
                     {skills.map((skill, index) => (
                         <motion.div
                             key={skill.name}
@@ -82,6 +82,30 @@ const About = () => {
                         </motion.div>
                     ))}
                 </div>
+
+                {/* Infinite Loop Logo Marquee under skills */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                    className="relative w-full overflow-hidden py-6 rounded-2xl border border-black/10 dark:border-white/10 bg-black/40 backdrop-blur-md shadow-inner"
+                >
+                    <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-black via-black/80 to-transparent z-10 pointer-events-none" />
+                    <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-black via-black/80 to-transparent z-10 pointer-events-none" />
+
+                    <div className="animate-marquee flex gap-6 md:gap-10 items-center">
+                        {[...skills, ...skills, ...skills, ...skills].map((skill, idx) => (
+                            <div
+                                key={`${skill.name}-${idx}`}
+                                className="flex items-center gap-3 px-5 py-2.5 bg-white/5 dark:bg-white/5 border border-white/10 rounded-full shrink-0 hover:border-cyan-400/60 hover:bg-cyan-400/10 hover:scale-105 transition-all duration-300 shadow-md group cursor-pointer"
+                            >
+                                <span className="text-2xl md:text-3xl group-hover:scale-110 transition-transform">{skill.icon}</span>
+                                <span className="text-gray-200 dark:text-gray-200 font-semibold text-sm md:text-base whitespace-nowrap">{skill.name}</span>
+                            </div>
+                        ))}
+                    </div>
+                </motion.div>
             </div>
 
         </section>

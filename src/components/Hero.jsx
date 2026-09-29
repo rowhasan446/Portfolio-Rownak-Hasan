@@ -89,7 +89,7 @@ const Hero = () => {
                 className="absolute inset-0 z-0"
             />
 
-            <div className="relative z-10 text-center px-6 pointer-events-none">
+            <div className="relative z-10 text-center px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -98,7 +98,7 @@ const Hero = () => {
                     <h2 className="text-sm md:text-lg text-cyan-400 font-mono mb-4 tracking-widest uppercase">
                         Hello, I am
                     </h2>
-                    <h1 className="text-4xl md:text-7xl font-bold text-white dark:text-white mb-6 tracking-tight leading-tight drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+                    <h1 className="text-4xl md:text-7xl font-extrabold mb-6 tracking-tight leading-tight bg-gradient-to-r from-cyan-400 via-teal-300 via-blue-400 to-indigo-500 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(34,211,238,0.5)] animate-gradient">
                         Rownak Hasan Joy
                     </h1>
                     <div className="text-xl md:text-3xl text-gray-300 dark:text-gray-400 font-light min-h-[80px] md:min-h-[40px] flex flex-col md:flex-row items-center justify-center gap-2">
@@ -117,8 +117,6 @@ const Hero = () => {
                     </div>
                 </motion.div>
 
-
-
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -127,7 +125,14 @@ const Hero = () => {
                 >
                     <a
                         href="#projects"
-                        className="px-8 py-3 border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 rounded-full text-sm font-medium tracking-wider uppercase"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            const projectsSection = document.getElementById("projects");
+                            if (projectsSection) {
+                                projectsSection.scrollIntoView({ behavior: "smooth" });
+                            }
+                        }}
+                        className="inline-block px-8 py-3 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition-all duration-300 rounded-full text-sm font-medium tracking-wider uppercase cursor-pointer relative z-20 shadow-[0_0_15px_rgba(34,211,238,0.3)] hover:shadow-[0_0_25px_rgba(34,211,238,0.7)]"
                     >
                         View My Work
                     </a>
@@ -139,13 +144,19 @@ const Hero = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 2, duration: 1 }}
-                className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+                onClick={() => {
+                    const aboutSection = document.getElementById("about");
+                    if (aboutSection) {
+                        aboutSection.scrollIntoView({ behavior: "smooth" });
+                    }
+                }}
+                className="absolute bottom-10 left-1/2 transform -translate-x-1/2 cursor-pointer z-20"
             >
-                <div className="w-[30px] h-[50px] border-2 border-white/20 rounded-full flex justify-center p-2">
+                <div className="w-[30px] h-[50px] border-2 border-white/20 hover:border-cyan-400 transition-colors rounded-full flex justify-center p-2">
                     <motion.div
                         animate={{ y: [0, 12, 0] }}
                         transition={{ duration: 1.5, repeat: Infinity, repeatType: "loop" }}
-                        className="w-1.5 h-1.5 bg-white rounded-full"
+                        className="w-1.5 h-1.5 bg-cyan-400 rounded-full"
                     />
                 </div>
             </motion.div>
